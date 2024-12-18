@@ -5,7 +5,9 @@ export default function NavLayout({
 }: { children: React.ReactNode }) {
     return (
         <div>
-            {children}
+            <nav className="max-w-screen-xl mx-auto p-4">
+                {children}
+            </nav>
         </div>
     )
 }
