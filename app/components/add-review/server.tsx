@@ -13,7 +13,6 @@ export const addReviewFunction = async (review: ReviewForm) => {
     signInAnonymously(auth).then(async () => {
         const docRef = doc(collection(db, "reviews"));
         await setDoc(docRef, { review });
-        console.log(docRef)
     }).catch((error: Error) => {
         console.log(error)
     })
