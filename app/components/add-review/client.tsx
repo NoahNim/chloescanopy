@@ -29,9 +29,9 @@ export default function AddReview() {
     return (
         <form onSubmit={handleSubmit}>
             Name
-            <input type="text" name="name" onChange={(e) => setName(e.target.value)} value={name} />
+            <input type="text" name="name" onChange={(e) => setName(e.target.value)} value={name} className="text-black" />
             Your Review
-            <input type="text" name="review" onChange={(e) => setReview(e.target.value)} value={review} />
+            <input type="text" name="review" onChange={(e) => setReview(e.target.value)} value={review} className="text-black" />
             <button type="submit">Submit</button>
         </form>
     )
