@@ -41,7 +41,7 @@ export default function ListReviews() {
             <ul>
                 {reviews.map((item) => (
                     <li key={item.id}>
-                        {item.review.name} - {item.review.reviewText}
+                        {item.review.name} - {item.review.reviewText} - {item.review.datePosted}
                     </li>
                 ))}
             </ul>

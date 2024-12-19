@@ -1,12 +1,12 @@
 'use server'
 import { use } from "react"
 import { signInAnonymously } from "firebase/auth"
-import { getDocs, collection } from "firebase/firestore"
+import { getDocs, collection, Timestamp } from "firebase/firestore"
 import { auth, db } from "@/lib/firebase"
 import ListReviews from "./client"
 
 interface FirestoreReviewData {
-    datePosted: string;
+    datePosted: Timestamp;
     reviewText: string;
     name: string;
 }
@@ -31,7 +31,7 @@ export async function getReviewsAction(): Promise<Review[]> { // Separate fetch 
 
             if (firestoreData && firestoreData.review) {
                 const reviewData = firestoreData.review;
-                const date = reviewData.datePosted.toString();
+                const date = reviewData.datePosted.toDate().toISOString();
 
                 reviewsArray.push({
                     id: reviewDoc.id,
