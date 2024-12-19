@@ -1,4 +1,4 @@
-'user server'
+'use server'
 import { signInAnonymously } from "firebase/auth"
 import { collection, doc, getDocs, setDoc } from "firebase/firestore"
 import { auth, db } from "@/lib/firebase"
