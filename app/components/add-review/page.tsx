@@ -1,7 +1,12 @@
+'use client'
+
+import { FormEvent } from "react"
+
+
 export default function AddReview() {
 
 
     return (
-        <div></div>
+        <div>Add review</div>
     )
 }

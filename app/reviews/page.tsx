@@ -1,12 +1,13 @@
-export default function Reviews() {
+import { FormEvent } from "react"
+import AddReviewLayout from "../components/add-review/layout"
 
-
+export default function Reviews({
+    children,
+}: { children: React.ReactNode }) {
     return (
         <div>
             <div className="flex justify-center">
-                <button>
-                    Leave a Review
-                </button>
+                <AddReviewLayout children={children} />
             </div>
         </div>
     )
