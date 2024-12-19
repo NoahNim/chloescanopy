@@ -1,37 +1,51 @@
 'use client'
 import { FormEvent, useState } from "react"
-import { addReviewAction } from "./server"
+import { useRouter } from "next/navigation";
 
 
 export default function AddReview() {
     const [name, setName] = useState<string>(""); // Input text of the name field on the form. State updates when the onChange event occurs on the name input.
     const [review, setReview] = useState<string>(""); // Input text of the review field on the form. State updates when the onChange event occurs on the review input.
+    const [submissionMessage, setSubmissionMessage] = useState<string | null>(null);
+    const router = useRouter();
 
 
     // Function which takes the data in the form and passes that data to the addReviewAction server action.
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-        try {
-            const nameData = name; // State of name input when handleSubmit is called.
-            const reviewData = review; // State of review input when handleSubmit is called.
-            const currentDate: Date = new Date(); // Date at the time handleSubmit is called.
+        event.preventDefault();
+        setSubmissionMessage("Submitting...");
 
+        try {
             const reviewFormData = {
-                name: nameData,
-                reviewText: reviewData,
-                datePosted: currentDate
+                review: {
+                    name: name,
+                    reviewText: review,
+                    datePosted: new Date().toISOString(), // Send date as ISO string
+                }
             };
 
-            const res = await addReviewAction(reviewFormData);
+            const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/reviews`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(reviewFormData),
+            });
 
-            if (res === "Success") {
+            if (res.ok) {
+                setSubmissionMessage("Review submitted successfully!");
                 setName("");
                 setReview("");
+                router.refresh();
+            } else {
+                const errorData = await res.json();
+                setSubmissionMessage(errorData.error || "Failed to submit review");
             }
-
         } catch (error: any) {
-            console.log(error);
+            console.error("Error submitting review:", error);
+            setSubmissionMessage("An error occurred during submission.");
         }
     }
 
