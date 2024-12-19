@@ -13,15 +13,14 @@ export default function AddReview() {
         try {
             const nameData = name;
             const reviewData = review;
-            console.log(nameData)
-            console.log(reviewData)
+            let currentDate: Date = new Date();
 
             const reviewFormData = {
                 name: nameData,
-                review: reviewData
+                review: reviewData,
+                datePosted: currentDate
             }
-
-            const res = await addReviewFunction(reviewFormData)
+            await addReviewFunction(reviewFormData)
         } catch (error: any) {
             console.log(error)
         }

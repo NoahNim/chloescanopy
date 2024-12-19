@@ -6,14 +6,17 @@ import { auth, db } from "@/lib/firebase"
 interface ReviewForm {
     name: string;
     review: string;
+    datePosted: Date;
 }
 
 // Function with parameters to add a review to firebase
 export const addReviewFunction = async (review: ReviewForm) => {
-    signInAnonymously(auth).then(async () => {
-        const docRef = doc(collection(db, "reviews"));
-        await setDoc(docRef, { review });
-    }).catch((error: Error) => {
+    try {
+        signInAnonymously(auth).then(async () => {
+            const docRef = doc(collection(db, "reviews"));
+            await setDoc(docRef, { review })
+        })
+    } catch (error: any) {
         console.log(error)
-    })
+    }
 }
