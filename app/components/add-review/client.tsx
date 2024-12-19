@@ -31,7 +31,7 @@ export default function AddReview() {
             }
 
         } catch (error: any) {
-            console.log(error)
+            console.log(error);
         }
     }
 

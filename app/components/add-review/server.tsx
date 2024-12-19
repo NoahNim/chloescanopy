@@ -13,8 +13,8 @@ interface ReviewForm {
 // Function with parameters to add a review to firebase
 export async function addReviewAction(review: ReviewForm): Promise<string> {
     try {
-        // The signInAnonmtously firebase method allows for a non-logged in user to write data to the firestore database.
-        await signInAnonymously(auth)
+        // The signInAnonmtously firebase method allows for a non-logged in user to write or retrieve data to the firestore database.
+        await signInAnonymously(auth);
         try {
             // If the collection "reviews" in the firestore exists then review is added to the reviews collection, and if the reviews collection does not exist then the reviews collection is created.
             await addDoc(collection(db, "reviews"), { review })
