@@ -13,14 +13,15 @@ export default function AddReview() {
         try {
             const nameData = name;
             const reviewData = review;
+            console.log(nameData)
+            console.log(reviewData)
+
             const reviewFormData = {
                 name: nameData,
                 review: reviewData
             }
 
             const res = await addReviewFunction(reviewFormData)
-
-            console.log(res)
         } catch (error: any) {
             console.log(error)
         }
@@ -29,9 +30,9 @@ export default function AddReview() {
     return (
         <form onSubmit={handleSubmit}>
             Name
-            <input type="text" name="name" onChange={() => setName} />
+            <input type="text" name="name" onChange={(e) => setName(e.target.value)} value={name} />
             Your Review
-            <input type="text" name="review" onChange={() => setReview} />
+            <input type="text" name="review" onChange={(e) => setReview(e.target.value)} value={review} />
             <button type="submit">Submit</button>
         </form>
     )
