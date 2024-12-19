@@ -1,9 +1,11 @@
 'use server'
+import { use } from "react"
 import { signInAnonymously } from "firebase/auth"
-import { getDocs, doc, collection } from "firebase/firestore"
+import { getDocs, collection } from "firebase/firestore"
 import { auth, db } from "@/lib/firebase"
+import ListReviews from "./client"
 
-interface Review {
+export interface Review {
     id: string;
     name: string;
     review: string;
@@ -35,8 +37,15 @@ export async function getReviewsAction() {
             return reviewsArray;
         } catch (error: any) {
             console.log(error)
+            return [];
         }
     } catch (error: any) {
         console.log(error)
+        return [];
     }
+}
+
+export default async function ListReviewsServerAction() {
+    const reviews = use(getReviewsAction());
+    return <ListReviews reviews={reviews} />;
 }
