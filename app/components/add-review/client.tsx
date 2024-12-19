@@ -19,7 +19,7 @@ export default function AddReview() {
 
             const reviewFormData = {
                 name: nameData,
-                review: reviewData,
+                reviewText: reviewData,
                 datePosted: currentDate
             };
 

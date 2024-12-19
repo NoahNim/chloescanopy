@@ -5,47 +5,50 @@ import { getDocs, collection } from "firebase/firestore"
 import { auth, db } from "@/lib/firebase"
 import ListReviews from "./client"
 
+interface FirestoreReviewData {
+    datePosted: string;
+    reviewText: string;
+    name: string;
+}
+
 export interface Review {
     id: string;
-    name: string;
-    review: string;
-    date: Date;
+    review: {
+        datePosted: string;
+        reviewText: string;
+        name: string;
+    };
 }
 
-export async function getReviewsAction() {
+export async function getReviewsAction(): Promise<Review[]> { // Separate fetch function
     try {
         await signInAnonymously(auth);
-        try {
-            const reviewsSnapshot = await getDocs(collection(db, "reviews"))
-            const reviewsArray: Review[] = [];
+        const reviewsSnapshot = await getDocs(collection(db, "reviews"));
+        const reviewsArray: Review[] = [];
 
-            reviewsSnapshot.forEach((review) => {
-                const reviewData = review.data();
-                if (reviewData && "name" in reviewData && "review" in reviewData && "date" in reviewData) {
-                    const typedReviewData = reviewData as Omit<Review, 'id'>;
-                    reviewsArray.push({
-                        id: review.id,
-                        ...typedReviewData,
-                    });
+        reviewsSnapshot.forEach((reviewDoc) => {
+            const firestoreData = reviewDoc.data() as { review: FirestoreReviewData } | undefined;
 
-                    return reviewsArray;
-                } else {
-                    console.warn("Review document is missing required fields:", review.id, reviewData);
-                }
-            })
+            if (firestoreData && firestoreData.review) {
+                const reviewData = firestoreData.review;
+                const date = reviewData.datePosted.toString();
 
-            return reviewsArray;
-        } catch (error: any) {
-            console.log(error)
-            return [];
-        }
+                reviewsArray.push({
+                    id: reviewDoc.id,
+                    review: {
+                        datePosted: date,
+                        reviewText: reviewData.reviewText,
+                        name: reviewData.name,
+                    },
+                });
+            } else {
+                console.warn("Review document is missing data:", reviewDoc.id, firestoreData);
+            }
+        });
+
+        return reviewsArray;
     } catch (error: any) {
-        console.log(error)
-        return [];
+        console.error("Error fetching reviews from Firestore:", error);
+        throw error; // Re-throw the error to be caught by Suspense
     }
-}
-
-export default async function ListReviewsServerAction() {
-    const reviews = use(getReviewsAction());
-    return <ListReviews reviews={reviews} />;
 }

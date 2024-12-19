@@ -6,7 +6,7 @@ import { auth, db } from "@/lib/firebase"
 // This interface tells the addReviewFunction what property types data from the form must have.
 interface ReviewForm {
     name: string;
-    review: string;
+    reviewText: string;
     datePosted: Date;
 }
 
