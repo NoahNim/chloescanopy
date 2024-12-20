@@ -11,7 +11,10 @@ export interface Review {
 }
 
 export default async function ListReviewsServer() {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/reviews`);
+    const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
+        ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+        : 'http://localhost:3000'; // Fallback for local development
+    const res = await fetch(`${baseUrl}/api/reviews`);
     console.log(res)
     if (!res.ok) {
         throw new Error(`Failed to fetch reviews: ${res.status} ${res.statusText}`);
