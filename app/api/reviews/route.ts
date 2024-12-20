@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextResponse } from 'next/server';
 import { signInAnonymously } from "firebase/auth";
-import { getDocs, collection, addDoc } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 import { auth, db } from "@/lib/firebase";
 
 interface FirestoreReviewData {
