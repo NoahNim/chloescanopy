@@ -51,6 +51,7 @@ export async function GET() {
                 name: "x"
             }
         }]
+        console.log(fakeReviews)
 
         return NextResponse.json(fakeReviews);
     } catch (error: any) {
