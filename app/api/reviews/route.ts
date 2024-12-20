@@ -44,8 +44,15 @@ export async function GET() {
                 console.warn("Review document is missing data:", reviewDoc.id, firestoreData);
             }
         });
+        const fakeReviews: Review[] = [{
+            id: "1", review: {
+                datePosted: "now",
+                reviewText: "sdgsdg",
+                name: "x"
+            }
+        }]
 
-        return NextResponse.json(reviewsArray);
+        return NextResponse.json(fakeReviews);
     } catch (error: any) {
         console.error("Error fetching reviews:", error);
         return NextResponse.json({ error: error.message }, { status: 500 });
