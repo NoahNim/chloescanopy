@@ -1,6 +1,7 @@
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import { NextResponse } from 'next/server';
 import { signInAnonymously } from "firebase/auth";
-import { getDocs, collection, addDoc, Timestamp } from "firebase/firestore";
+import { getDocs, collection, addDoc } from "firebase/firestore";
 import { auth, db } from "@/lib/firebase";
 
 interface FirestoreReviewData {
