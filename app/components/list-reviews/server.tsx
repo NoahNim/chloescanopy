@@ -14,6 +14,7 @@ export default async function ListReviewsServer() {
     const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
         ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
         : 'http://localhost:3000'; // Fallback for local development
+    console.log(baseUrl)
     const res = await fetch(`${baseUrl}/api/reviews`);
     console.log(res)
     if (!res.ok) {
