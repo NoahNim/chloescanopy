@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 import { Review, } from "./server"
 
 interface ListReviewsProps {
