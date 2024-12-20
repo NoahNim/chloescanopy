@@ -4,11 +4,11 @@ import { signInAnonymously } from "firebase/auth";
 import { collection, addDoc } from "firebase/firestore";
 import { auth, db } from "@/lib/firebase";
 
-interface FirestoreReviewData {
-    datePosted: string;
-    reviewText: string;
-    name: string;
-}
+// interface FirestoreReviewData {
+//     datePosted: string;
+//     reviewText: string;
+//     name: string;
+// }
 
 export interface Review {
     id: string;
