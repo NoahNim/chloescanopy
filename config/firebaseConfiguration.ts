@@ -5,6 +5,7 @@ interface FirebaseConfiguration {
     storageBucket: string;
     messagingSenderId: string;
     appId: string;
+    measurementId: string;
 }
 
 const firebaseConfiguration: FirebaseConfiguration = {
@@ -14,6 +15,7 @@ const firebaseConfiguration: FirebaseConfiguration = {
     storageBucket: process.env.FIREBASE_STORAGE_BUCKET as string,
     messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID as string,
     appId: process.env.FIREBASE_APP_ID as string,
+    measurementId: process.env.FIREBASE_MEASUREMENT_ID as string
 };
 
 export default firebaseConfiguration;
