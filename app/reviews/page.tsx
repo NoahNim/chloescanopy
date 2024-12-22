@@ -14,10 +14,10 @@ export default function Reviews() {
         setError(null); // Clear any previous error
 
         try {
-            const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
-                ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
-                : 'http://localhost:3000';
-            const res = await fetch(`${baseUrl}/api/reviews`);
+            // const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
+            //     ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+            //     : 'http://localhost:3000';
+            const res = await fetch(`api/reviews`);
 
             if (!res.ok) {
                 throw new Error(`Failed to fetch reviews: ${res.status}`);
