@@ -6,11 +6,10 @@ import { Review } from "../list-reviews/server";
 
 interface addRevewProps {
     fetchData: () => Promise<void>;
-    updateReviews: (reviews: Review[]) => void;
 }
 
 
-export default function AddReview({ fetchData, updateReviews }: addRevewProps) {
+export default function AddReview({ fetchData }: addRevewProps) {
     const [name, setName] = useState<string>(""); // Input text of the name field on the form. State updates when the onChange event occurs on the name input.
     const [review, setReview] = useState<string>(""); // Input text of the review field on the form. State updates when the onChange event occurs on the review input.
     const [submissionMessage, setSubmissionMessage] = useState<string | null>(null);

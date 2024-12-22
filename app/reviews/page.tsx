@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 import { useEffect, useState } from 'react';
 import ListReviews from "../components/list-reviews/client"
@@ -42,7 +43,7 @@ export default function Reviews() {
         <div>
             <div className="flex flex-col justify-center">
                 <ListReviews reviews={reviews} isLoading={isLoading} error={error} />
-                <AddReview fetchData={fetchData} updateReviews={setReviews} />
+                <AddReview fetchData={fetchData} />
             </div>
         </div>
     )
