@@ -2,9 +2,15 @@
 'use client'
 import { FormEvent, useState } from "react"
 import { useRouter } from "next/navigation";
+import { Review } from "../list-reviews/server";
+
+interface addRevewProps {
+    fetchData: () => Promise<void>;
+    updateReviews: (reviews: Review[]) => void;
+}
 
 
-export default function AddReview() {
+export default function AddReview({ fetchData, updateReviews }: addRevewProps) {
     const [name, setName] = useState<string>(""); // Input text of the name field on the form. State updates when the onChange event occurs on the name input.
     const [review, setReview] = useState<string>(""); // Input text of the review field on the form. State updates when the onChange event occurs on the review input.
     const [submissionMessage, setSubmissionMessage] = useState<string | null>(null);
@@ -42,7 +48,7 @@ export default function AddReview() {
                 setSubmissionMessage("Review submitted successfully!");
                 setName("");
                 setReview("");
-                router.refresh();
+                fetchData();
             } else {
                 const errorData = await res.json();
                 setSubmissionMessage(errorData.error || "Failed to submit review");

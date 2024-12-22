@@ -5,40 +5,11 @@ import { Review } from "./server"
 
 interface ListReviewsProps {
     reviews: Review[] | null;
+    isLoading: boolean;
+    error: string | null;
 }
 
-export default function ListReviews({ reviews }: ListReviewsProps) {
-    // const [reviews, setReviews] = useState<Review[] | null>(null);
-    // const [isLoading, setIsLoading] = useState(false);
-    // const [error, setError] = useState<string | null>(null);
-
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         setIsLoading(true);
-    //         setError(null); // Clear any previous error
-
-    //         try {
-    //             const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
-    //                 ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
-    //                 : 'http://localhost:3000';
-    //             const res = await fetch(`${baseUrl}/api/reviews`);
-
-    //             if (!res.ok) {
-    //                 throw new Error(`Failed to fetch reviews: ${res.status}`);
-    //             }
-
-    //             const reviewsData = await res.json();
-    //             setReviews(reviewsData);
-    //         } catch (error: any) {
-    //             console.error("Error fetching reviews:", error);
-    //             setError(error.message || "An error occurred while fetching reviews");
-    //         } finally {
-    //             setIsLoading(false);
-    //         }
-    //     };
-    //     fetchData();
-    // }, []);
-
+export default function ListReviews({ reviews, isLoading, error }: ListReviewsProps) {
     if (isLoading) {
         return <div>Loading reviews...</div>;
     }
