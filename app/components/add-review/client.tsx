@@ -2,7 +2,6 @@
 'use client'
 import { FormEvent, useState } from "react"
 import { useRouter } from "next/navigation";
-import { Review } from "../list-reviews/server";
 
 interface addRevewProps {
     fetchData: () => Promise<void>;
