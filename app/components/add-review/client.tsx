@@ -1,14 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 import { FormEvent, useState } from "react"
-import { useRouter } from "next/navigation";
+
+interface addRevewProps {
+    fetchData: () => Promise<void>;
+}
 
 
-export default function AddReview() {
+export default function AddReview({ fetchData }: addRevewProps) {
     const [name, setName] = useState<string>(""); // Input text of the name field on the form. State updates when the onChange event occurs on the name input.
     const [review, setReview] = useState<string>(""); // Input text of the review field on the form. State updates when the onChange event occurs on the review input.
     const [submissionMessage, setSubmissionMessage] = useState<string | null>(null);
-    const router = useRouter();
 
 
     // Function which takes the data in the form and passes that data to the addReviewAction server action.
@@ -26,8 +28,11 @@ export default function AddReview() {
                     datePosted: new Date().toISOString(), // Send date as ISO string
                 }
             };
+            // const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
+            //     ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+            //     : 'http://localhost:3000';
 
-            const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/reviews`, {
+            const res = await fetch(`api/reviews`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -39,7 +44,7 @@ export default function AddReview() {
                 setSubmissionMessage("Review submitted successfully!");
                 setName("");
                 setReview("");
-                router.refresh();
+                fetchData();
             } else {
                 const errorData = await res.json();
                 setSubmissionMessage(errorData.error || "Failed to submit review");
