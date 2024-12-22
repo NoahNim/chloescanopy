@@ -3,38 +3,41 @@
 import { useEffect, useState } from 'react';
 import { Review } from "./server"
 
-export default function ListReviews() {
-    const [reviews, setReviews] = useState<Review[] | null>(null);
-    const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState<string | null>(null);
+interface ListReviewsProps {
+    reviews: Review[] | null;
+}
 
-    useEffect(() => {
-        const fetchData = async () => {
-            setIsLoading(true);
-            setError(null); // Clear any previous error
+export default function ListReviews({ reviews }: ListReviewsProps) {
+    // const [reviews, setReviews] = useState<Review[] | null>(null);
+    // const [isLoading, setIsLoading] = useState(false);
+    // const [error, setError] = useState<string | null>(null);
 
-            try {
-                const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
-                    ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
-                    : 'http://localhost:3000';
-                const res = await fetch(`${baseUrl}/api/reviews`);
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         setIsLoading(true);
+    //         setError(null); // Clear any previous error
 
-                if (!res.ok) {
-                    throw new Error(`Failed to fetch reviews: ${res.status}`);
-                }
+    //         try {
+    //             const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
+    //                 ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+    //                 : 'http://localhost:3000';
+    //             const res = await fetch(`${baseUrl}/api/reviews`);
 
-                const reviewsData = await res.json();
-                setReviews(reviewsData);
-            } catch (error: any) {
-                console.error("Error fetching reviews:", error);
-                setError(error.message || "An error occurred while fetching reviews");
-            } finally {
-                setIsLoading(false);
-            }
-        };
+    //             if (!res.ok) {
+    //                 throw new Error(`Failed to fetch reviews: ${res.status}`);
+    //             }
 
-        fetchData();
-    }, []);
+    //             const reviewsData = await res.json();
+    //             setReviews(reviewsData);
+    //         } catch (error: any) {
+    //             console.error("Error fetching reviews:", error);
+    //             setError(error.message || "An error occurred while fetching reviews");
+    //         } finally {
+    //             setIsLoading(false);
+    //         }
+    //     };
+    //     fetchData();
+    // }, []);
 
     if (isLoading) {
         return <div>Loading reviews...</div>;

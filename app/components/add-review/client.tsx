@@ -26,8 +26,11 @@ export default function AddReview() {
                     datePosted: new Date().toISOString(), // Send date as ISO string
                 }
             };
+            const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
+                ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+                : 'http://localhost:3000';
 
-            const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/reviews`, {
+            const res = await fetch(`${baseUrl}/api/reviews`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
