@@ -6,9 +6,7 @@ export default function NavLayout({
     return (
         <div>
             <nav>
-                <div>
-                    {children}
-                </div>
+                {children}
             </nav>
         </div>
     )
