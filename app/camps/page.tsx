@@ -3,9 +3,9 @@ import Image from "next/image";
 export default function Camps() {
 
     return (
-        <div className="border-solid rounded justify-center p-2">
+        <div className="border-solid rounded mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h1 className="text-center font-bold text-2xl"><b>2025 Summer Camp Details</b></h1>
-            <div className="grid grid-cols-2 gap-6 border-solid p-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 border-solid p-4 max-w-6xl mx-auto">
                 <div className="bg-teal-200 border-solid rounded p-4 flex flex-col">
                     <div className="flex justify-center border-solid rounded">
                         <Image src="/images/beachcamp.JPG" alt="Image error" width={400}
