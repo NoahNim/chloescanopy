@@ -5,7 +5,6 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
   background-image: url('../public/images/background.jpeg');
   background-size: 100vw 100vh;
   color: #0a0a0a;
