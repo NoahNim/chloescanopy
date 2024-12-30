@@ -25,12 +25,13 @@ export default function AddReview({ fetchData }: addRevewProps) {
                 review: {
                     name: name,
                     reviewText: review,
-                    datePosted: new Date().toISOString(), // Send date as ISO string
+                    datePosted: new Date().toLocaleString('en-US', {
+                        month: 'long',
+                        day: 'numeric',
+                        year: 'numeric'
+                    }), // Send date as ISO string
                 }
             };
-            // const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
-            //     ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
-            //     : 'http://localhost:3000';
 
             const res = await fetch(`api/reviews`, {
                 method: 'POST',
