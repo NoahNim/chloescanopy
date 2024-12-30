@@ -29,7 +29,7 @@ export default function AddReview({ fetchData }: addRevewProps) {
                         month: 'long',
                         day: 'numeric',
                         year: 'numeric'
-                    }), // Send date as ISO string
+                    }),
                 }
             };
 
@@ -57,7 +57,7 @@ export default function AddReview({ fetchData }: addRevewProps) {
     }
 
     return (
-        <div className="w-full max-w-md mx-auto p-4 bg-teal-200 border-solid rounded mt-4">
+        <div className="w-full max-w-md mx-auto p-4 bg-green-500 border-solid rounded mt-4">
             <form onSubmit={handleSubmit} className="space-y-4 border-solid rounded">
                 <div className="flex flex-col">
                     <label htmlFor="name" className="mb-2">Name</label>
