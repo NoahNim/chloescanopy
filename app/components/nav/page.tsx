@@ -13,7 +13,7 @@ export default function Nav() {
     }
 
     return (
-        <div className="bg-green-500 h-5">
+        <div className="bg-lime-300/90 h-5">
             <div className="flex justify-center h-16">
                 <ul className="hidden md:flex flex-row space-x-40">
                     <li className="basis-1/4"><Link href={('/')}>Home</Link></li>
@@ -21,7 +21,7 @@ export default function Nav() {
                     <li className="basis-1/4"><Link href={('/reviews')}>Reviews</Link></li>
                 </ul>
             </div>
-            <div className="flex absolute top-0 left-1 bg-green-500">
+            <div className="flex absolute top-0 left-1 bg-lime-300/90">
                 {isMenuOpen ? (<ul className={`transition-all duration-300 ease-in-out flex-row space-y-2`}>
                     <li><button onClick={toggleMenu}>Close Menu</button> </li>
                     <li className="basis-1/4"><Link href={('/')}><button onClick={toggleMenu}>Home</button></Link></li>

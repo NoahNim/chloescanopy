@@ -6,7 +6,7 @@ export default function Camps() {
         <div className="border-solid rounded mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h1 className="text-center font-bold text-2xl"><b>2025 Summer Camp Details</b></h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 border-solid p-4 max-w-6xl mx-auto">
-                <div className="bg-green-500 border-solid rounded p-4 flex flex-col">
+                <div className="bg-lime-300/90 border-solid rounded p-4 flex flex-col">
                     <div className="flex justify-center border-solid rounded">
                         <Image src="/images/beachcamp.JPG" alt="Image error" width={400}
                             height={300}
@@ -21,7 +21,7 @@ export default function Camps() {
                         Discover what the beach has to offer during a negative low tide. We&apos;ll observe tide pool creatures, practice proper beach etiquette, walk the shoreline from park to park, and share stories of our native lands and the Salish Sea.
                     </p>
                 </div>
-                <div className="bg-green-500 border-solid rounded p-4 flex flex-col">
+                <div className="bg-lime-300/90 border-solid rounded p-4 flex flex-col">
                     <div className="flex justify-center border-solid rounded">
                         <Image src="/images/createandexplore.jpeg" alt="Image error" width={400}
                             height={300}
@@ -36,7 +36,7 @@ export default function Camps() {
                         We&apos;ll be playing outside, exploring the woods, enjoying time at the park, splashing around in the water, playing group games, and doing arts and crafts. Don&apos;t forget to bring a swimsuit and a towel, as we&apos;ll be heading to the water park!
                     </p>
                 </div>
-                <div className="bg-green-500 border-solid rounded p-4 flex flex-col">
+                <div className="bg-lime-300/90 border-solid rounded p-4 flex flex-col">
                     <div className="flex justify-center border-solid rounded">
                         <Image src="/images/beachcamp2.jpeg" alt="Image error" width={400}
                             height={300}
@@ -51,7 +51,7 @@ export default function Camps() {
                         Discover what the beach has to offer during a negative low tide. We&apos;ll observe tide pool creatures, practice proper beach etiquette, walk the shoreline from park to park, and hear stories about the Salish Sea.
                     </p>
                 </div>
-                <div className="bg-green-500 border-solid rounded p-4 flex flex-col">
+                <div className="bg-lime-300/90 border-solid rounded p-4 flex flex-col">
                     <div className="flex justify-center border-solid rounded">
                         <Image src="/images/createandexplore2.jpeg" alt="Image error" width={400}
                             height={300}
