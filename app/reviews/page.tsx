@@ -41,7 +41,7 @@ export default function Reviews() {
 
     return (
         <div>
-            <div className="flex flex-col justify-center">
+            <div className="border-solid rounded mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <ListReviews reviews={reviews} isLoading={isLoading} error={error} />
                 <AddReview fetchData={fetchData} />
             </div>

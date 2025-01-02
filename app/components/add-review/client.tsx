@@ -57,7 +57,7 @@ export default function AddReview({ fetchData }: addRevewProps) {
     }
 
     return (
-        <div className="w-full max-w-md mx-auto p-4 bg-green-500 border-solid rounded mt-4">
+        <div className="w-full max-w-md mx-auto p-4 bg-lime-300/90 border-solid rounded m-4">
             <form onSubmit={handleSubmit} className="space-y-4 border-solid rounded">
                 <div className="flex flex-col">
                     <label htmlFor="name" className="mb-2">Name</label>
@@ -83,7 +83,7 @@ export default function AddReview({ fetchData }: addRevewProps) {
                 </div>
                 <button
                     type="submit"
-                    className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                    className="w-full bg-blue-500/80 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
                     Submit
                 </button>
