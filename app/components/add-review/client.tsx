@@ -83,7 +83,7 @@ export default function AddReview({ fetchData }: addRevewProps) {
                 </div>
                 <button
                     type="submit"
-                    className="w-full bg-blue-500/80 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                    className="w-full bg-lime-500/90 px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
                     Submit
                 </button>
