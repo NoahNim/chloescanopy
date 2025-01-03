@@ -15,7 +15,7 @@ export default function SwimLessons() {
     return (
         <div className="border-solid rounded mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h1 className="text-center font-bold text-2xl"><b>Swim Lessons</b></h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 border-solid p-4 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-6 border-solid p-4 max-w-2xl mx-auto">
                 <SwimSessions title={sessions[0].title} sundays={sessions[0].sundays} mondays={sessions[0].mondays} thursdays={sessions[0].thursdays} />
                 <SwimSessions title={sessions[1].title} sundays={sessions[1].sundays} mondays={sessions[1].mondays} thursdays={sessions[1].thursdays} />
                 <SwimSessions title={sessions[2].title} sundays={sessions[2].sundays} mondays={sessions[2].mondays} thursdays={sessions[2].thursdays} />
