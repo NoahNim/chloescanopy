@@ -14,7 +14,7 @@ export default function Camps() {
                     </div>
                     <ul className="list-none p-2 text-center">
                         <li><h2><b>June 23-27 Beach Camp</b></h2></li>
-                        <li><b>Location:</b> North Acres Park</li>
+                        <li><b>Location:</b> Carkeek & Golden Gardens </li>
                         <li><b>Hours:</b> 9am - 3pm</li>
                     </ul>
                     <p>
