@@ -23,6 +23,16 @@ export default function SwimLessons() {
             <div className="grid grid-cols-1 md:grid-cols-1 gap-6 border-solid p-4 max-w-2xl mx-auto">
                 <Pricing />
             </div>
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-6 border-solid p-4 max-w-2xl mx-auto bg-lime-300/90">
+                <h1 className="text-center font-bold text-2xl"><b>Swim Levels</b></h1>
+                <ul className="text-center">
+                    <li><b>Beginner:</b> Swimmer is learning to dunk their head, blow bubbles, front float, back float, kick rhythmically, and love the water</li>
+                    <li><b>Beginner Shallow End:</b> Swimmer is comfortable putting their head in the water, has an independent back float, learning to safely make their way across the short length of the pool on their stomach and on their back</li>
+                    <li><b>Intermediate 1/2 & Full pool:</b> Swimmer is comfortable trying things on their own, learning Front crawl with sidebreating and backstroke</li>
+                    <li><b>Advanced Full Pool:</b> Swimmer can independently make their way across the long length of the pool, Swimmer is refining technique, leaning advanced swim stokes and building endurance (Crawlstroke, Backstroke, Breaststroke, Butterfly)</li>
+                    <li><b>All classes:</b> Games and Water Safety</li>
+                </ul>
+            </div>
         </div>
     )
 }
