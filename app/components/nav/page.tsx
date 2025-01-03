@@ -10,6 +10,7 @@ export default function Nav() {
         { href: '/', label: 'Home' },
         { href: '/camps', label: 'Camps' },
         { href: '/reviews', label: 'Reviews' },
+        { href: '/swimlessons', label: 'Swim' }
     ]
 
     return (
