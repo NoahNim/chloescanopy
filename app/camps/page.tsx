@@ -77,7 +77,62 @@ export default function Camps() {
                 </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-1 gap-4 border-solid p-2 m-1 max-w-2xl mx-auto bg-lime-300/90">
+                <h2 className="text-center font-bold text-2xl">More Information</h2>
 
+                <div className="space-y-4">
+                    <div>
+                        <p className="font-bold">Camp Hours:</p>
+                        <p>9:00 AM – 3:00 PM</p>
+                    </div>
+
+                    <div>
+                        <p className="font-bold">Cost:</p>
+                        <p>$495/week or $105/day</p>
+                    </div>
+
+                    <div>
+                        <p className="font-bold">Before & After Care:</p>
+                        <p>Early drop-off and after-care services are available upon request and must be arranged in advance for each camp week. These services are billed at $30 per hour, per family.</p>
+                    </div>
+
+                    <div>
+                        <p className="font-bold">Dress Code:</p>
+                        <ul className="list-disc pl-6">
+                            <li>Please ensure your child wears clothes that can get dirty—camp is all about fun and adventure!</li>
+                            <li>Shoes should securely fasten to your child&apos;s feet; flip-flops are not allowed. Keens or similar shoes are a great option to ensure safety during outdoor activities.</li>
+                            <li>Apply sunscreen to your child before arriving at camp each day.</li>
+                            <li>Pack an extra set of clothes, as activities near the water may result in your child getting wet.</li>
+                            <li>Depending on the weather, a jacket, sunhat, or raincoat may be necessary. Please check the forecast and dress your child accordingly.</li>
+                            <li>We have a limited supply of backup clothes. If your child borrows any, kindly wash and return them on the next camp day.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p className="font-bold">Please Pack:</p>
+                        <ul className="list-disc pl-6">
+                            <li>2 Snacks</li>
+                            <li>A nutritious lunch</li>
+                            <li>A filled water bottle</li>
+                            <li>A change of clothes</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p className="font-bold">Camp Day Flow:</p>
+                        <ul className="list-none space-y-1">
+                            <li>9:00 – 9:30 AM: Arrival; Outdoor Play + Art & Crafts</li>
+                            <li>9:30 – 9:40 AM: Group Connection Meeting</li>
+                            <li>9:40 – 10:00 AM: Group Game</li>
+                            <li>10:00 – 10:20 AM: Snack & Story</li>
+                            <li>10:20 – 11:00 AM: Adventure Time</li>
+                            <li>11:00 – 12:00 PM: Group Activities / Project Time</li>
+                            <li>12:00 – 12:45 PM: Lunch & Storytime</li>
+                            <li>12:45 – 1:45 PM: Group Activities / Project Time</li>
+                            <li>1:45 – 2:45 PM: Outdoor Play</li>
+                            <li>2:45 – 3:00 PM: Group Connection Meeting & Pick-Up</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div className="text-center m-3">
                 <b>
