@@ -9,8 +9,8 @@ export default function Nav() {
     const navLinks = [
         { href: '/', label: 'Home' },
         { href: '/camps', label: 'Camps' },
+        { href: '/swimlessons', label: 'Swim' },
         { href: '/reviews', label: 'Reviews' },
-        { href: '/swimlessons', label: 'Swim' }
     ]
 
     return (
