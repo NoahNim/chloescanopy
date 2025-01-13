@@ -40,7 +40,7 @@ export default function SwimLessons() {
                 <Pricing />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-1 gap-4 border-solid p-2 m-1 max-w-2xl mx-auto bg-lime-300/90">
-                <h1 className="text-center font-bold text-2xl"><b>More Informations</b></h1>
+                <h1 className="text-center font-bold text-2xl"><b>More Information</b></h1>
                 <div>
                     <b className=" font-bold">Location</b>
                     <p>The indoor pool is located in a residential neighborhood in Shoreline, near 155th & Meridian. The exact address will be provided upon sign-up.</p>

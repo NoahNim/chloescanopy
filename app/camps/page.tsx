@@ -76,6 +76,9 @@ export default function Camps() {
                     </p>
                 </div>
             </div>
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-4 border-solid p-2 m-1 max-w-2xl mx-auto bg-lime-300/90">
+
+            </div>
             <div className="text-center m-3">
                 <b>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLScWji_cy3fVgNh6z61WhP2uSSQyliT-XjF4dH0UKDCk6KN2fw/viewform" target="_blank" className="bg-lime-500/90 border-solid rounded p-2 font-bold text-2xl">Click Here to Enroll Now</a>
