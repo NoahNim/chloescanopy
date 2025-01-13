@@ -17,7 +17,7 @@ export default function Home() {
       </div>
       <div className="text-center m-3">
         <b>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeivVl2FR8R-shYEYyLsBf58-zdyPukTi0XGf39vJO4wr4_2Q/viewform" target="_blank" className="bg-lime-500/90 border-solid rounded p-2">Join Mailing List</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeivVl2FR8R-shYEYyLsBf58-zdyPukTi0XGf39vJO4wr4_2Q/viewform" target="_blank" className="bg-lime-500/90 border-solid rounded p-2 font-bold text-2xl">Join Mailing List</a>
         </b>
       </div>
     </div>

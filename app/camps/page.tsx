@@ -7,7 +7,7 @@ export default function Camps() {
             <h1 className="text-center font-bold text-2xl"><b>2025 Summer Camp Details</b></h1>
             <div className="text-center m-3">
                 <b>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeivVl2FR8R-shYEYyLsBf58-zdyPukTi0XGf39vJO4wr4_2Q/viewform" target="_blank" className="bg-lime-500/90 border-solid rounded p-2">Enroll Here</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScWji_cy3fVgNh6z61WhP2uSSQyliT-XjF4dH0UKDCk6KN2fw/viewform" target="_blank" className="bg-lime-500/90 border-solid rounded p-2 font-bold text-2xl">Enroll Here</a>
                 </b>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 border-solid p-4 max-w-6xl mx-auto">
