@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Chloe's Canopy",
   description: "",
   icons: {
-    icon: '/tree.png',
+    icon: '/icon.ico',
   },
 };
 
