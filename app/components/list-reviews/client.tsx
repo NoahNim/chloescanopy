@@ -23,7 +23,7 @@ export default function ListReviews({ reviews, isLoading, error }: ListReviewsPr
     return (
         <div className="">
             <h1 className="text-center font-bold text-4xl"><b>Reviews</b></h1>
-            <p className="text-center text-lg bold">We&apos;d love to hear about your experience! How long has your child been participating in programs with Chloe? What has your overall experience been like working with Chloe?</p>
+            <p className="text-center text-lg bg-lime-300/90 rounded-lg p-4">We&apos;d love to hear about your experience! How long has your child been participating in programs with Chloe? What has your overall experience been like working with Chloe?</p>
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 p-4 max-w-6xl mx-auto">
                 {reviews?.map((item) => (
                     <div key={item.id} className="bg-lime-300/90 rounded-lg shadow-lg overflow-hidden">
