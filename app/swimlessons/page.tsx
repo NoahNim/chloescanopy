@@ -14,7 +14,7 @@ export default function SwimLessons() {
 
     return (
         <div className="border-solid rounded mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h1 className="text-center font-bold text-2xl"><b>Swim Lessons</b></h1>
+            <h1 className="text-center font-bold text-4xl"><b>Swim Lessons</b></h1>
             <div className="bg-lime-300/90 border-solid rounded p-4 flex flex-col">
                 <p>
                     Swimming is a vital life skill, and ensuring safety while fostering a love for the water is Chloe&apos;s top priority. Chloe offers group lessons for children ages 3-12, as well as private lessons for all ages. The pool is heated to a comfortable 89-91°F, creating the perfect environment for learning and enjoyment.

@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="w-full max-w-md mx-auto p-4">
       <div className="bg-lime-200/70 border-solid rounded mt-4">
-        <h1 className="text-center text-2xl"><b>Chloe&apos;s Canopy</b></h1>
+        <h1 className="text-center text-4xl"><b>Chloe&apos;s Canopy</b></h1>
         <Image src="/images/image0.jpeg" alt="Image error" width={400}
           height={300}
           className="rounded object-cover w-full h-[300px]" />
